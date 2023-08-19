@@ -21,7 +21,7 @@ body {
         ),
         url("../image/jokerCover.jpg");
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-      height: 550px;
+      height: 650px;
       width: 100%;
       background-size: cover;
       background-position: center;
@@ -84,19 +84,62 @@ body {
               margin-top: 0;
               cursor: pointer;
               background-color: transparent;
-              padding: 15px 25px;
+              padding: 20px 25px;
               gap: 0.5rem;
             }
             .game-search{
               margin: 0;
-              padding-top: 15px;
-              padding-left: 15px;
+              padding-top: 17px;
+              padding-left: 17px;
               cursor: pointer;
               font-size: 20px;
-              width: 50px;
-              height: 50px;
+              width: 55px;
+              height: 55px;
               @extend .linear-gradient;
               color: white;
+            }
+          }
+        }
+        .search-result{
+          @extend .flex-col;
+          align-items: center;
+          font-family: $font-lato;
+
+          .search-content{
+            background-color: rgba(248, 248, 248, 0.137);
+            margin-top: 10px;
+            border-radius: 10px;
+            backdrop-filter:blur(10px);
+            width: 600px;
+            padding-bottom: 15px;
+            // height: 500px;
+            .search-heading{
+              
+              div{
+                background-color: rgba(0, 0, 0, 0.308);
+                padding: 10px 15px;
+                border-radius: 10px;
+                @extend .flex-row;
+                margin: 20px;
+                justify-content: space-between;
+              }
+            }
+            .search-items{
+              padding: 0 25px;
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 1rem;
+              .single-item{
+                cursor: pointer;
+                @extend .flex-row;
+                align-items: center;
+                gap: 0.5rem;
+                img{
+                  height: 45px;
+                  width: 45px;
+                  border-radius: 50%;
+                }
+              }
             }
           }
         }
@@ -118,24 +161,28 @@ body {
         // cover left content
         .cover-left {
           flex: 1;
+          @extend .flex-col;
+          gap: 0.5rem;
           p {
+            width: 100px;
             padding: 8px 10px;
             border-radius: 5px;
             font-weight: 400;
-            display: inline-block;
+            // display: inline-block;
             background-color: rgba(240, 248, 255, 0.219);
           }
           h1 {
-            font-size: 28px;
+            font-size: 32px;
+            font-weight: 700;
           }
           div {
             display: flex;
             .trapezoid {
               @extend .linear-gradient;
-              padding: 2px;
-              height: 80px;
-              width: 40px;
-              border-radius: 2px;
+              padding: 5px;
+              height: 110px;
+              width: 50px;
+              border-radius: 5px;
               -webkit-clip-path: polygon(0 0, 82% 0, 100% 26%, 0 26%);
               clip-path: polygon(0 0, 82% 0, 100% 26%, 0 26%);
             }
@@ -153,8 +200,6 @@ body {
             }
         }
       }
-
-
     }
   }
 }
