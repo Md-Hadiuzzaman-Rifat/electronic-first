@@ -10,6 +10,7 @@
 body {
   background-color: $bg-black;
   max-width: 1560px;
+  @extend .flex-col;
   .container {
     width: 100%;
     header {
@@ -63,10 +64,50 @@ body {
               letter-spacing: -1px;
             }
           }
+          .account{
+            @extend .flex-row;
+            gap:2rem
+          }
         }
+         // search box
+        .search-box{
+          font-family: $font-lato;
+          @extend .flex-col;
+          align-items: center;
+          div{
+            @extend .flex-row;
+            background-color: rgba(240, 248, 255, 0.144);
+            margin-top:10px;
+            border-radius: 50px;
+            .games{
+              @extend .flex-row;
+              margin-top: 0;
+              cursor: pointer;
+              background-color: transparent;
+              padding: 15px 25px;
+              gap: 0.5rem;
+            }
+            .game-search{
+              margin: 0;
+              padding-top: 15px;
+              padding-left: 15px;
+              cursor: pointer;
+              font-size: 20px;
+              width: 50px;
+              height: 50px;
+              @extend .linear-gradient;
+              color: white;
+            }
+          }
+        }
+
+
+
+
       }
-      // navigation section done
+      // navigation section done 
       // Cover Text
+
       .coverText {
         color: white;
         font-family: "Lato", sans-serif;
@@ -112,6 +153,8 @@ body {
             }
         }
       }
+
+
     }
   }
 }
