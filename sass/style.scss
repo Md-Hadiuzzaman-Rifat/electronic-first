@@ -37,7 +37,7 @@ body {
             align-items: center;
             font-size: 16px;
             .logo-text {
-              @extend .flex-col
+              @extend .flex-col;
             }
             span {
               text-transform: uppercase;
@@ -49,7 +49,7 @@ body {
               font-size: 36px;
             }
             .span-last {
-              @extend .logo-red-text
+              @extend .logo-red-text;
             }
           }
           .links {
@@ -64,22 +64,22 @@ body {
               letter-spacing: -1px;
             }
           }
-          .account{
+          .account {
             @extend .flex-row;
-            gap:2rem
+            gap: 2rem;
           }
         }
-         // search box
-        .search-box{
+        // search box
+        .search-box {
           font-family: $font-lato;
           @extend .flex-col;
           align-items: center;
-          div{
+          div {
             @extend .flex-row;
             background-color: rgba(240, 248, 255, 0.144);
-            margin-top:10px;
+            margin-top: 10px;
             border-radius: 50px;
-            .games{
+            .games {
               @extend .flex-row;
               margin-top: 0;
               cursor: pointer;
@@ -87,7 +87,7 @@ body {
               padding: 20px 25px;
               gap: 0.5rem;
             }
-            .game-search{
+            .game-search {
               margin: 0;
               padding-top: 17px;
               padding-left: 17px;
@@ -100,22 +100,21 @@ body {
             }
           }
         }
-        .search-result{
+        .search-result {
           @extend .flex-col;
           align-items: center;
           font-family: $font-lato;
 
-          .search-content{
+          .search-content {
             background-color: rgba(248, 248, 248, 0.137);
             margin-top: 10px;
             border-radius: 10px;
-            backdrop-filter:blur(10px);
+            backdrop-filter: blur(10px);
             width: 600px;
             padding-bottom: 15px;
             // height: 500px;
-            .search-heading{
-              
-              div{
+            .search-heading {
+              div {
                 background-color: rgba(0, 0, 0, 0.308);
                 padding: 10px 15px;
                 border-radius: 10px;
@@ -124,17 +123,17 @@ body {
                 justify-content: space-between;
               }
             }
-            .search-items{
+            .search-items {
               padding: 0 25px;
               display: grid;
               grid-template-columns: repeat(3, 1fr);
               gap: 1rem;
-              .single-item{
+              .single-item {
                 cursor: pointer;
                 @extend .flex-row;
                 align-items: center;
                 gap: 0.5rem;
-                img{
+                img {
                   height: 45px;
                   width: 45px;
                   border-radius: 50%;
@@ -143,12 +142,8 @@ body {
             }
           }
         }
-
-
-
-
       }
-      // navigation section done 
+      // navigation section done
       // Cover Text
 
       .coverText {
@@ -189,15 +184,43 @@ body {
           }
         }
         // cover right content
-        .cover-right{
+        .cover-right {
           flex: 1;
-            p{
-              text-transform: uppercase;
-              background-color: rgba(37, 37, 37, 0.699);
-              letter-spacing: 5px;
-              display: inline-block;
-              padding: 10px 25px;
-            }
+          p {
+            text-transform: uppercase;
+            background-color: rgba(37, 37, 37, 0.699);
+            letter-spacing: 5px;
+            display: inline-block;
+            padding: 10px 25px;
+          }
+        }
+      }
+    }
+    main {
+      margin-top: 50px;
+      color: $text-white;
+      font-family: $font-lato;
+      .text {
+        @extend .flex-row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        p {
+          border: 1px solid gray;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      }
+      .showcase {
+        .showcase-content {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+          }
         }
       }
     }
