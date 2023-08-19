@@ -1,0 +1,117 @@
+@import "./partials/classes";
+@import "./partials/mixins";
+@import "./partials/variables";
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+}
+body {
+  background-color: $bg-black;
+  max-width: 1560px;
+  .container {
+    width: 100%;
+    header {
+      background-image: linear-gradient(
+          130deg,
+          rgba(0, 0, 0, 0.6839110644257703) 11%,
+          rgba(0, 0, 0, 0.11808473389355745) 66%
+        ),
+        url("../image/jokerCover.jpg");
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+      height: 550px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      .content {
+        color: $text-white;
+        nav {
+          height: 48px;
+          @extend .flex-row;
+          align-items: center;
+          justify-content: space-between;
+          .logo {
+            @extend .flex-row;
+            align-items: center;
+            font-size: 16px;
+            .logo-text {
+              @extend .flex-col
+            }
+            span {
+              text-transform: uppercase;
+              font-family: "Lato", sans-serif;
+              font-weight: 700;
+            }
+            .span-first {
+              color: red;
+              font-size: 36px;
+            }
+            .span-last {
+              @extend .logo-red-text
+            }
+          }
+          .links {
+            a {
+              font-weight: 300;
+              color: rgba(255, 255, 255, 0.918);
+              text-decoration: none;
+              font-family: $font-lato;
+              font-size: 16px;
+              padding: 10px 15px;
+              font-weight: 400;
+              letter-spacing: -1px;
+            }
+          }
+        }
+      }
+      // navigation section done
+      // Cover Text
+      .coverText {
+        color: white;
+        font-family: "Lato", sans-serif;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 400px;
+        // cover left content
+        .cover-left {
+          flex: 1;
+          p {
+            padding: 8px 10px;
+            border-radius: 5px;
+            font-weight: 400;
+            display: inline-block;
+            background-color: rgba(240, 248, 255, 0.219);
+          }
+          h1 {
+            font-size: 28px;
+          }
+          div {
+            display: flex;
+            .trapezoid {
+              @extend .linear-gradient;
+              padding: 2px;
+              height: 80px;
+              width: 40px;
+              border-radius: 2px;
+              -webkit-clip-path: polygon(0 0, 82% 0, 100% 26%, 0 26%);
+              clip-path: polygon(0 0, 82% 0, 100% 26%, 0 26%);
+            }
+          }
+        }
+        // cover right content
+        .cover-right{
+          flex: 1;
+            p{
+              text-transform: uppercase;
+              background-color: rgba(37, 37, 37, 0.699);
+              letter-spacing: 5px;
+              display: inline-block;
+              padding: 10px 25px;
+            }
+        }
+      }
+    }
+  }
+}
