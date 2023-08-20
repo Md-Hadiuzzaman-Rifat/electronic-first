@@ -29,6 +29,7 @@ const pcIcon=document.querySelector("#pcIcon")
 const searchResult=document.querySelector("#searchResult")
 pcIcon.addEventListener("click",()=>{
     searchResult.classList.toggle('active')
-    // console.log("clicked");
 })
-
+searchIcon.addEventListener('click',()=>{
+    searchIcon.classList.toggle("active")
+})

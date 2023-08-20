@@ -71,7 +71,7 @@ body {
             gap: 2rem;
           }
         }
-        // search box
+        // search box start
         .search-box {
           font-family: $font-lato;
           @extend .flex-col;
@@ -81,6 +81,7 @@ body {
             background-color: rgba(44, 44, 44, 0.705);
             margin-top: 10px;
             border-radius: 50px;
+            position: relative;
             .games {
               @extend .flex-row;
               margin-top: 0;
@@ -182,6 +183,13 @@ body {
               height: 55px;
               @extend .linear-gradient;
               color: white;
+              
+            }
+            .active{
+              position: absolute;
+              right:-30px;
+              background-color: orange;
+              width: 110%;
             }
           }
         }
