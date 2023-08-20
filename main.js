@@ -20,7 +20,15 @@
 //     </p>
 //   </div>
 // `
-
 // setupCounter(document.querySelector('#counter')) 
 
+
 import "./sass/style.scss"
+const searchIcon=document.querySelector("#searchIcon")
+const pcIcon=document.querySelector("#pcIcon")
+const searchResult=document.querySelector("#searchResult")
+pcIcon.addEventListener("click",()=>{
+    searchResult.classList.toggle('active')
+    // console.log("clicked");
+})
+
