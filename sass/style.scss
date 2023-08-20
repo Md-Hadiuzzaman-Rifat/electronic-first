@@ -6,6 +6,7 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0;
+  overflow-y: wrap;
 }
 body {
   position: relative;
@@ -68,6 +69,46 @@ body {
               letter-spacing: -1px;
             }
           }
+          .nav-icon{
+            cursor: pointer;
+            display: none;
+            .nav-links{
+              display: none;
+              margin-top: 10px;
+            }
+            .active{
+            display: flex;
+            margin-top: 30px;
+            @extend .flex-col;
+            position: absolute;
+            right: 40px;
+            a{
+              color: white;
+              text-decoration: none;
+              font-family: $font-lato;
+              border-radius: 10px;
+              padding: 15px 5px;
+              &:hover{
+                background-color: rgba(0, 0, 0, 0.733);
+              }
+            }
+            
+          }
+
+
+
+          }
+          @media screen and (max-width:786px) {
+            .nav-icon{
+              display: block;
+              text-align: right;
+            }
+          }
+          @media only screen and (max-width: 786px) {
+            .links{
+              display: none;
+            }
+          }
           .account {
             @extend .flex-row;
             gap: 2rem;
@@ -76,6 +117,11 @@ body {
               &:last-child{
                 color: orange;
               }
+            }
+          }
+          @media only screen and (max-width: 786px) {
+            .account{
+              display: none;
             }
           }
         }
@@ -122,7 +168,6 @@ body {
                   align-items: center;
                   font-family: $font-lato;
 
-        
                   .search-content {
                     background-color: rgba(248, 248, 248, 0.137);
                     margin-top: 10px;
@@ -173,10 +218,8 @@ body {
                         }
                       }
                     }
+                    
                   }
-                  
-
-
 
                 }
               }
@@ -215,7 +258,7 @@ body {
                   outline: none;
                 }
                  &::placeholder{
-                  color: white;
+                  color: rgba(255, 255, 255, 0.61);
                  }
               }
               position: absolute;
@@ -230,6 +273,11 @@ body {
             }
           }
         }
+        @media only screen and (max-width: 786px) {
+          .search-box{
+            display: none;
+          }
+        }
         // search box end
       }
       // navigation section done
@@ -241,8 +289,8 @@ body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        height: 400px;
         padding: 60px;
+        
         // cover left content
         .cover-left {
           flex: 1;
@@ -277,6 +325,7 @@ body {
         .cover-right {
           flex: 1;
           p {
+            cursor: pointer;
             text-transform: uppercase;
             background-color: rgba(37, 37, 37, 0.699);
             letter-spacing: 5px;
@@ -285,9 +334,19 @@ body {
           }
         }
       }
+      @media only screen and (max-width: 786px) {
+        .coverText{
+          margin-top: 50px;
+          // @extend .flex-col
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+        }
+      }
     }
     main {
-      margin-top: 50px;
+      padding: 0 60px;
+      margin-top: 30px;
       color: $text-white;
       font-family: $font-lato;
       .text {
@@ -303,16 +362,25 @@ body {
       }
       .showcase {
         .showcase-content {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          @extend .flex-row;
+          justify-content: space-around;
           gap: 1rem;
           img {
-            width: 300px;
-            height: 200px;
+            cursor: pointer;
+            width: 350px;
+            height: 220px;
             object-fit: cover;
+            border-radius: 5px;
+          }
+          .img-discount{
+            .trapezoid{
+              @extend .trapezoid;
+              margin-top: -32px
+            }
           }
         }
       }
     }
   }
 }
+
