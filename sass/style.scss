@@ -12,9 +12,11 @@ body {
   background-color: $bg-black;
   max-width: 1560px;
   @extend .flex-col;
+  justify-content: center;
   .container {
     width: 100%;
     header {
+      padding: 15px 40px;
       background-image: linear-gradient(
           130deg,
           rgba(0, 0, 0, 0.6839110644257703) 11%,
@@ -69,6 +71,12 @@ body {
           .account {
             @extend .flex-row;
             gap: 2rem;
+            i{
+              font-size: 18px;
+              &:last-child{
+                color: orange;
+              }
+            }
           }
         }
         // search box start
@@ -97,13 +105,12 @@ body {
                 margin-top:-5px;
                 .active{
                   display: none;
-                
                 }
                 .search-result {
                   opacity: 1;
                   background-color: transparent;
                   position: absolute;
-                  top: 120px;
+                  top: 62px;
                   left: 0;
                   right: 0;
                   z-index: 100;
@@ -114,9 +121,7 @@ body {
                   @extend .flex-col;
                   align-items: center;
                   font-family: $font-lato;
-                  .active{
-                    display: none;
-                  }
+
         
                   .search-content {
                     background-color: rgba(248, 248, 248, 0.137);
@@ -170,6 +175,9 @@ body {
                     }
                   }
                   
+
+
+
                 }
               }
             }
@@ -183,13 +191,42 @@ body {
               height: 55px;
               @extend .linear-gradient;
               color: white;
-              
+              transition: none;
+              input{
+                display: none;
+              }
             }
             .active{
+              transition: 1s;
+              input{
+                display: block;
+                position: absolute;
+                margin-left:-20px ;
+                height: inherit;
+                margin-top: -17px;
+                width: inherit;
+                border: none;
+                background-color: transparent;
+                overflow: hidden;
+                color: white;
+                font-size: 18px;
+                margin-left: 35px;
+                &:focus{
+                  outline: none;
+                }
+                 &::placeholder{
+                  color: white;
+                 }
+              }
               position: absolute;
               right:-30px;
               background-color: orange;
-              width: 110%;
+              width: 105%;
+              ::after{
+                content: "x";
+                position: absolute;
+                right: -25px;
+              }
             }
           }
         }
@@ -205,6 +242,7 @@ body {
         flex-direction: row;
         align-items: center;
         height: 400px;
+        padding: 60px;
         // cover left content
         .cover-left {
           flex: 1;

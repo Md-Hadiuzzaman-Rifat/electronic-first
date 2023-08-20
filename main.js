@@ -27,9 +27,14 @@ import "./sass/style.scss"
 const searchIcon=document.querySelector("#searchIcon")
 const pcIcon=document.querySelector("#pcIcon")
 const searchResult=document.querySelector("#searchResult")
+const input=document.querySelector("#input")
 pcIcon.addEventListener("click",()=>{
     searchResult.classList.toggle('active')
+    console.log("pc icon active");
 })
 searchIcon.addEventListener('click',()=>{
+    searchIcon.classList.toggle("active")
+})
+input.addEventListener('click',()=>{
     searchIcon.classList.toggle("active")
 })
