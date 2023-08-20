@@ -152,6 +152,7 @@ body {
                 .active{
                   display: none;
                 }
+
                 .search-result {
                   opacity: 1;
                   background-color: transparent;
@@ -167,6 +168,9 @@ body {
                   @extend .flex-col;
                   align-items: center;
                   font-family: $font-lato;
+
+
+
 
                   .search-content {
                     background-color: rgba(248, 248, 248, 0.137);
@@ -218,8 +222,8 @@ body {
                         }
                       }
                     }
-                    
                   }
+                  
 
                 }
               }
